@@ -11,7 +11,8 @@ from datasets import get_datasets, get_data_loaders
 from utils import save_model, save_plots
 from inference import start_inference
 
-device = 'cuda'
+# device = ('mps' if torch.backends.mps.is_available() else 'cpu')
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 def train(model, trainloader, optimizer, criterion):
@@ -177,7 +178,6 @@ def start_train(model_name, diffusion, epoch_to_inference=100, epochs=100, lr=0.
     train_loader, valid_loader = get_data_loaders(dataset_train, dataset_valid)
 
     # Set the computation device.
-    device = ('mps' if torch.backends.mps.is_available() else 'cpu')
     if verbose:
         print(f"\n[PARAMETERS]: Computation device: {device}")
         print(f"[PARAMETERS]: Learning rate: {lr}")

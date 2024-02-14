@@ -9,3 +9,4 @@ torchsummary
 tqdm
 plotly
 opencv-python
+scikit-learn
