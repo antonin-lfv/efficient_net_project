@@ -7,6 +7,7 @@ from torchvision import transforms
 EFFICIENTNET_MODELS = {
     "efficient_net_b0": models.efficientnet_b0,
     "efficient_net_b1": models.efficientnet_b1,
+    "efficient_net_b2": models.efficientnet_b2,
 }
 
 # device = ('mps' if torch.backends.mps.is_available() else 'cpu')
