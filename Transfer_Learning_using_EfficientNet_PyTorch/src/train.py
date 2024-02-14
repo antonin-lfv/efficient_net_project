@@ -321,7 +321,7 @@ def start_train(model_name, diffusion, epoch_to_inference=100, epochs=100, lr=0.
 
 
 if __name__ == '__main__':
-    diffusions = ['perona-malik', 'coherence-enhancing']
+    diffusions = ['coherence-enhancing']
     model_name = 'efficient_net_b0'
     for diffusion in diffusions:
         print(f'[INFO]: Starting training for {model_name} with diffusion: {diffusion}')
