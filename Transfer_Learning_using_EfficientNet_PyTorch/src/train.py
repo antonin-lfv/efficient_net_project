@@ -307,7 +307,7 @@ def start_train(model_name, diffusion, epoch_to_inference=100, epochs=100, lr=0.
                     file.write(str(conf_matrix))
                     file.write('\n')
                     # Get the values of the parameters of the first diffusion layer.
-                    if diffusion:
+                    if diffusion != 'no_diffusion':
                         diffusion_layer = model.features[0]
                         diffusion_trainable_params_list = diffusion_layer.trainable_params_list
                         diffusion_trainable_params_name_list = diffusion_layer.trainable_params_name_list
