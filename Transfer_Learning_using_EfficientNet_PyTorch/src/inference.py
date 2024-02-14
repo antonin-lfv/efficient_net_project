@@ -120,5 +120,4 @@ def start_inference(diffusion, model_name, show_results=False) -> [float, float,
 
 
 if __name__ == '__main__':
-    start_inference(diffusion='perona-malik', model_name='efficient_net_b0', show_results=True)
-
+    start_inference(diffusion='no_diffusion', model_name='efficient_net_b1', show_results=False)
