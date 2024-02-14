@@ -8,6 +8,11 @@ EFFICIENTNET_MODELS = {
     "efficient_net_b0": models.efficientnet_b0,
     "efficient_net_b1": models.efficientnet_b1,
     "efficient_net_b2": models.efficientnet_b2,
+    "efficient_net_b3": models.efficientnet_b3,
+    "efficient_net_b4": models.efficientnet_b4,
+    "efficient_net_b5": models.efficientnet_b5,
+    "efficient_net_b6": models.efficientnet_b6,
+    "efficient_net_b7": models.efficientnet_b7,
 }
 
 # device = ('mps' if torch.backends.mps.is_available() else 'cpu')
