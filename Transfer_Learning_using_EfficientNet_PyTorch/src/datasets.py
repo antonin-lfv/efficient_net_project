@@ -8,7 +8,7 @@ ROOT_DIR = '../input/Brain-Tumor-Classification-DataSet'
 VALID_SPLIT = 0.1
 IMAGE_SIZE = 224  # Image size of resize when applying transforms.
 BATCH_SIZE = 16
-NUM_WORKERS = 4  # Number of parallel processes for data preparation.
+NUM_WORKERS = 2  # Number of parallel processes for data preparation.
 
 
 # Training transforms
