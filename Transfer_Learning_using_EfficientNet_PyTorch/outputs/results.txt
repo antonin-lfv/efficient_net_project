@@ -25,3 +25,19 @@ Confusion Matrix:
 iterations: 30.0
 delta: 0.02078646421432495
 kappa: 15.242805480957031
+
+
+-- efficient_net_b0 / Diffusion: coherence-enhancing --
+Epochs: 22
+Accuracy: 0.25380710659898476
+Precision: 0.06441804736014842
+Recall: 0.25380710659898476
+F1 Score: 0.10275591360282782
+Confusion Matrix:
+[[100   0   0   0]
+ [115   0   0   0]
+ [105   0   0   0]
+ [ 74   0   0   0]]
+dt: nan
+k: nan
+rho: 4.0

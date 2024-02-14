@@ -1,6 +1,7 @@
 import torch
 import plotly.graph_objects as go
 import os
+import json
 
 
 def save_model(epochs, model, optimizer, criterion, pretrained, diffusion, model_name):
@@ -64,3 +65,21 @@ def save_plots(train_acc, valid_acc, train_loss, valid_loss, pretrained, diffusi
         yaxis_title='Loss'
     )
     fig_loss.write_image(f"../outputs/{model_name}/loss_pretrained_{pretrained}_{diffusion if diffusion else 'no_diffusion'}.png")
+
+
+def save_plots_from_file(pretrained, diffusion, model_name):
+    """
+    Function to save the loss and accuracy plots to disk using Plotly from a file.
+    """
+
+    # Open training_stats.json file and read the contents.
+    with open('../outputs/efficient_net_b0/training_stats.json', 'r') as f:
+        training_stats = json.load(f)
+        training_stats = training_stats[diffusion]
+        train_acc, valid_acc, train_loss, valid_loss = training_stats['train_acc'], training_stats['valid_acc'], training_stats['train_loss'], training_stats['valid_loss']
+
+    save_plots(train_acc, valid_acc, train_loss, valid_loss, pretrained, diffusion, model_name)
+
+
+if __name__ == '__main__':
+    save_plots_from_file(pretrained=True, diffusion='coherence-enhancing', model_name='efficient_net_b0')
