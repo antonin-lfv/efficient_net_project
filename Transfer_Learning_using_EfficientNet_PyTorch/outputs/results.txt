@@ -73,3 +73,29 @@ Confusion Matrix:
 dt: 0.05091364309191704
 k: 4.840188980102539
 rho: 4.0
+
+
+-- efficient_net_b1 / Diffusion: no_diffusion --
+Epochs: 32
+Accuracy: 0.4593908629441624
+Precision: 0.39716085862720873
+Recall: 0.4593908629441624
+F1 Score: 0.36022758020665574
+Confusion Matrix:
+[[ 22  71   0   7]
+ [  0 114   0   1]
+ [  9  61   0  35]
+ [  0  29   0  45]]
+
+
+-- efficient_net_b1 / Diffusion: no_diffusion --
+Epochs: 33
+Accuracy: 0.34517766497461927
+Precision: 0.43219724437998547
+Recall: 0.34517766497461927
+F1 Score: 0.2979618260392372
+Confusion Matrix:
+[[23 16  0 61]
+ [ 0 43  0 72]
+ [ 5  7  0 93]
+ [ 0  4  0 70]]
