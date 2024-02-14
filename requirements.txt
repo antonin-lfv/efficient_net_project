@@ -1,0 +1,11 @@
+mat73
+numpy
+matplotlib
+scipy
+Pillow
+torchvision
+torch
+torchsummary
+tqdm
+plotly
+opencv-python
