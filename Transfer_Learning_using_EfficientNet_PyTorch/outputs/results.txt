@@ -99,3 +99,48 @@ Confusion Matrix:
  [ 0 43  0 72]
  [ 5  7  0 93]
  [ 0  4  0 70]]
+
+
+-- efficient_net_b2 / Diffusion: no_diffusion --
+Epochs: 30
+Accuracy: 0.5736040609137056
+Precision: 0.6434251758345738
+Recall: 0.5736040609137056
+F1 Score: 0.5487349400770533
+Confusion Matrix:
+[[49 40  5  6]
+ [17 98  0  0]
+ [72 11 19  3]
+ [ 7  7  0 60]]
+
+
+-- efficient_net_b2 / Diffusion: perona-malik --
+Epochs: 30
+Accuracy: 0.44416243654822335
+Precision: 0.3682275533759128
+Recall: 0.44416243654822335
+F1 Score: 0.3493082476403906
+Confusion Matrix:
+[[ 22  73   0   5]
+ [  0 115   0   0]
+ [ 14  71   0  20]
+ [  4  32   0  38]]
+iterations: 30.0
+delta: 0.025412235409021378
+kappa: 15.19322681427002
+
+
+-- efficient_net_b2 / Diffusion: coherence-enhancing --
+Epochs: 30
+Accuracy: 0.31218274111675126
+Precision: 0.2584388227921112
+Recall: 0.31218274111675126
+F1 Score: 0.26971485170101384
+Confusion Matrix:
+[[54 34  0 12]
+ [49 47  0 19]
+ [84  9  0 12]
+ [40 12  0 22]]
+dt: 0.027893144637346268
+k: 4.825850009918213
+rho: 4.0
