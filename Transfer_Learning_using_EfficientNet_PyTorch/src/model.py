@@ -217,8 +217,12 @@ def build_model(pretrained=True, fine_tune=True, num_classes=10, diffusion=None,
     # Modify the last layer (classification head) to have num_classes output neurons.
     if int(model_name[-1]) <= 1:
         in_features = 1280
-    elif int(model_name[-1]) > 1:
+    elif int(model_name[-1]) == 2:
         in_features = 1408
+    elif int(model_name[-1]) == 3:
+        in_features = 1536
+    elif int(model_name[-1]) == 4:
+        in_features = 1792
 
     model.classifier[1] = nn.Linear(in_features=in_features, out_features=num_classes)
     return model
