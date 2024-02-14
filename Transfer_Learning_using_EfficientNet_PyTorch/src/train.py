@@ -327,7 +327,7 @@ if __name__ == '__main__':
         print(f'[INFO]: Starting training for {model_name} with diffusion: {diffusion}')
         start_train(model_name=model_name,
                     diffusion=diffusion,
-                    epoch_to_inference=1,
+                    epoch_to_inference=50,
                     epochs=50,
                     pretrained=True,
                     fine_tune=True,

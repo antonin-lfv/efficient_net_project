@@ -87,18 +87,18 @@ def start_inference(diffusion, model_name, show_results=False) -> [float, float,
         y_pred.append(pred_class_name.lower())
 
         # Annotate the image with ground truth.
-        cv2.putText(
+        """cv2.putText(
             orig_image, f"GT: {gt_class_name}",
             (10, 25), cv2.FONT_HERSHEY_SIMPLEX,
             0.7, (0, 255, 0), 2, lineType=cv2.LINE_AA
-        )
+        )"""
         # Annotate the image with prediction.
-        cv2.putText(
+        """cv2.putText(
             orig_image, f"Pred: {pred_class_name.lower()}",
             (10, 55), cv2.FONT_HERSHEY_SIMPLEX,
             0.7, (100, 100, 225), 2, lineType=cv2.LINE_AA
-        )
-        cv2.imshow('Result', orig_image)
+        )"""
+        # cv2.imshow('Result', orig_image)
         cv2.imwrite(f"../outputs/predictions/{model_name}/{gt_class_name}_"
                     f"{diffusion if diffusion else 'no_diffusion'}.jpg", orig_image)
 
