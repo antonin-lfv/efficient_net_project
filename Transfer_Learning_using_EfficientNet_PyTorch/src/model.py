@@ -210,5 +210,5 @@ def build_model(pretrained=True, fine_tune=True, num_classes=10, diffusion=None,
             print('[IMPORTANT]: No diffusion used')
 
     # Modify the last layer (classification head) to have num_classes output neurons.
-    model.classifier[1] = nn.Linear(in_features=1280, out_features=num_classes)
+    model.classifier[1] = nn.Linear(in_features=1408, out_features=num_classes)
     return model
