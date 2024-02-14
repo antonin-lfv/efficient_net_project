@@ -13,7 +13,9 @@ from model import build_model
 # Constants.
 DATA_PATH = '../input/test_images'
 IMAGE_SIZE = 224
-DEVICE = 'mps'
+# device = ('mps' if torch.backends.mps.is_available() else 'cpu')
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 
 def start_inference(diffusion, model_name, show_results=False) -> [float, float, float, float]:
     """
