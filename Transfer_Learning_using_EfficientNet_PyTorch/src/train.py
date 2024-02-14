@@ -11,7 +11,7 @@ from datasets import get_datasets, get_data_loaders
 from utils import save_model, save_plots
 from inference import start_inference
 
-device = 'mps'
+device = 'cuda'
 
 
 def train(model, trainloader, optimizer, criterion):
