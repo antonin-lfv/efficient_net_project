@@ -12,7 +12,7 @@ from utils import save_model, save_plots
 from inference import start_inference
 
 # device = ('mps' if torch.backends.mps.is_available() else 'cpu')
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "mps")
 
 
 def train(model, trainloader, optimizer, criterion):
@@ -321,10 +321,8 @@ def start_train(model_name, diffusion, epoch_to_inference=100, epochs=100, lr=0.
 
 
 if __name__ == '__main__':
-    """diffusions = ['no_diffusion', 'perona-malik', 'coherence-enhancing']
-    model_name = 'efficient_net_b1'"""
-    diffusions = ['coherence-enhancing']
-    model_name = 'efficient_net_b0'
+    diffusions = ['no_diffusion', 'perona-malik', 'coherence-enhancing']
+    model_name = 'efficient_net_b1'
     for diffusion in diffusions:
         print(f'[INFO]: Starting training for {model_name} with diffusion: {diffusion}')
         start_train(model_name=model_name,
