@@ -1,0 +1,27 @@
+-- efficient_net_b0 / Diffusion: no_diffusion --
+Epochs: 50
+Accuracy: 0.39593908629441626
+Precision: 0.49644033942724836
+Recall: 0.39593908629441626
+F1 Score: 0.32712032970454075
+Confusion Matrix:
+[[ 13  22   0  65]
+ [  1  69   0  45]
+ [  0   4   0 101]
+ [  0   0   0  74]]
+
+
+-- efficient_net_b0 / Diffusion: perona-malik --
+Epochs: 50
+Accuracy: 0.5025380710659898
+Precision: 0.3921656547346879
+Recall: 0.5025380710659898
+F1 Score: 0.4272907642001499
+Confusion Matrix:
+[[49 29  0 22]
+ [21 78  0 16]
+ [46  1  0 58]
+ [ 0  3  0 71]]
+iterations: 30.0
+delta: 0.02078646421432495
+kappa: 15.242805480957031
