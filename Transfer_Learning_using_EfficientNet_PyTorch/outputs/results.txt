@@ -41,3 +41,35 @@ Confusion Matrix:
 dt: nan
 k: nan
 rho: 4.0
+
+
+-- efficient_net_b1 / Diffusion: perona-malik --
+Epochs: 30
+Accuracy: 0.37817258883248733
+Precision: 0.6193110330166168
+Recall: 0.37817258883248733
+F1 Score: 0.28033257812574686
+Confusion Matrix:
+[[ 14  73   0  13]
+ [  0 115   0   0]
+ [  4  54   3  44]
+ [  0  57   0  17]]
+iterations: 30.0
+delta: 0.015827400609850883
+kappa: 15.190675735473633
+
+
+-- efficient_net_b1 / Diffusion: coherence-enhancing --
+Epochs: 30
+Accuracy: 0.3197969543147208
+Precision: 0.3455762606479392
+Recall: 0.3197969543147208
+F1 Score: 0.21785346167865877
+Confusion Matrix:
+[[ 0 88  2 10]
+ [ 0 97  0 18]
+ [ 0 97  4  4]
+ [ 0 49  0 25]]
+dt: 0.05091364309191704
+k: 4.840188980102539
+rho: 4.0
