@@ -9,6 +9,9 @@ EFFICIENTNET_MODELS = {
     "efficient_net_b1": models.efficientnet_b1,
 }
 
+# device = ('mps' if torch.backends.mps.is_available() else 'cpu')
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 
 class PeronaMalikLayer(nn.Module):
     def __init__(self):
@@ -81,9 +84,9 @@ class CoherenceEnhancingDiffusionLayer(nn.Module):
 
         # Define the gradient filters for x and y directions
         self.sobel_x = torch.tensor([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]],
-                                    dtype=torch.float32).view(1, 1, 3, 3).to('mps')
+                                    dtype=torch.float32).view(1, 1, 3, 3).to(device)
         self.sobel_y = torch.tensor([[-1, -2, -1], [0, 0, 0], [1, 2, 1]],
-                                    dtype=torch.float32).view(1, 1, 3, 3).to('mps')
+                                    dtype=torch.float32).view(1, 1, 3, 3).to(device)
 
     def compute_gradients(self, img):
         grad_x = F.conv2d(img, self.sobel_x, padding=1)
